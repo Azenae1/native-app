@@ -1,42 +1,28 @@
-import { Image, StyleSheet, Platform, TextInput, Button } from 'react-native';
+import { Image, StyleSheet, Platform, TextInput, Button, View } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { View } from 'react-native-reanimated/lib/typescript/Animated';
+
 
 
 
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
+    <View style={styles.titleContainer}>
+      <View style={styles.top}>
         <ThemedText style={styles.textStyle}>Welcome!</ThemedText>
-        <TextInput value='input value' />
-        
-        
-        <HelloWave />
-      </ThemedView>
       <Button title='Click me'/>
-      
-    </ParallaxScrollView>
+      </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+    marginTop: 50,
   },
   stepContainer: {
     gap: 8,
@@ -48,6 +34,10 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     position: 'absolute',
+  },
+  top: {
+    flexDirection: 'row',
+   alignSelf: 'center',
   },
   textStyle: {
     color: 'blue',
