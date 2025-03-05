@@ -6,6 +6,9 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { View } from 'react-native-reanimated/lib/typescript/Animated';
 
+
+
+
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
@@ -17,7 +20,7 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText style={{color: 'orange'}} type="title">Welcome!</ThemedText>
+        <ThemedText style={styles.textStyle}>Welcome!</ThemedText>
         <TextInput value='input value' />
         
         
@@ -46,4 +49,10 @@ const styles = StyleSheet.create({
     left: 0,
     position: 'absolute',
   },
+  textStyle: {
+    color: 'blue',
+    fontSize: 32,
+    borderWidth: 1,
+    borderColor: 'red',
+  }
 });
