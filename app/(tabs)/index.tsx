@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform, TextInput, Button, View, Text } from 'react-native';
+import { Image, StyleSheet, Platform, TextInput, Button, View, Text, Dimensions } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -8,7 +8,7 @@ import { ThemedView } from '@/components/ThemedView';
 
 
 
-
+const width = Dimensions.get('window').width;
 export default function HomeScreen() {
   return (
     <View style={styles.titleContainer}>
@@ -16,10 +16,10 @@ export default function HomeScreen() {
         <ThemedText style={styles.textStyle}>Welcome!</ThemedText>
       <Button title='Click me'/>
       </View>
-      <View style={{backgroundColor: 'aquamarine', alignItems: 'flex-end', height: 500, gap: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
-        <View style={{backgroundColor: 'tomato', flexBasis: 100, flexGrow: 1, height: 100}}><Text>Text</Text></View>
-        <View style={{backgroundColor: 'purple', flexBasis: 100, flexGrow: 1, height: 100}}><Text>Text</Text></View>
-        <View style={{backgroundColor: 'green', flexBasis: 100, flexGrow: 1, height: 100}}><Text>Text</Text></View>
+      <View style={{backgroundColor: 'aquamarine', alignItems: 'flex-start', height: 500, gap: 10, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between'}}>
+        <View style={{backgroundColor: 'tomato', width: (width / 2) - 5, height: 100}}><Text>Text</Text></View>
+        <View style={{backgroundColor: 'purple', width: (width / 2) - 5, height: 100}}><Text>Text</Text></View>
+        <View style={{backgroundColor: 'green', width: (width / 2) - 5, height: 100}}><Text>Text</Text></View>
       </View>
     </View>
   );
