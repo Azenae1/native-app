@@ -16,10 +16,10 @@ export default function HomeScreen() {
         <ThemedText style={styles.textStyle}>Welcome!</ThemedText>
       <Button title='Click me'/>
       </View>
-      <View style={{backgroundColor: 'aquamarine', alignItems: 'flex-end', height: 500, flexDirection: 'row', justifyContent: 'space-between'}}>
+      <View style={{backgroundColor: 'aquamarine', alignItems: 'flex-end', height: 500, gap: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
         <View style={{backgroundColor: 'tomato', flexBasis: 100, flexGrow: 1, height: 100}}><Text>Text</Text></View>
-        <View style={{backgroundColor: 'purple', flexBasis: 100, height: 100}}><Text>Text</Text></View>
-        <View style={{backgroundColor: 'green', flexBasis: 100, height: 100}}><Text>Text</Text></View>
+        <View style={{backgroundColor: 'purple', flexBasis: 100, flexGrow: 1, height: 100}}><Text>Text</Text></View>
+        <View style={{backgroundColor: 'green', flexBasis: 100, flexGrow: 1, height: 100}}><Text>Text</Text></View>
       </View>
     </View>
   );
