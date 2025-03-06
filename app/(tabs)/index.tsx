@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform, TextInput, Button, View } from 'react-native';
+import { Image, StyleSheet, Platform, TextInput, Button, View, Text } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -16,10 +16,10 @@ export default function HomeScreen() {
         <ThemedText style={styles.textStyle}>Welcome!</ThemedText>
       <Button title='Click me'/>
       </View>
-      <View style={{backgroundColor: 'aquamarine', alignItems: 'flex-end', height: 500, alignContent: 'center', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between'}}>
-        <View style={{backgroundColor: 'tomato', height: 100, width: 200}}></View>
-        <View style={{backgroundColor: 'purple', height: 100, width: 200}}></View>
-        <View style={{backgroundColor: 'green', height: 100, width: 200}}></View>
+      <View style={{backgroundColor: 'aquamarine', alignItems: 'flex-end', height: 500, flexDirection: 'row', justifyContent: 'space-between'}}>
+        <View style={{backgroundColor: 'tomato', flexBasis: 100, flexGrow: 1, height: 100}}><Text>Text</Text></View>
+        <View style={{backgroundColor: 'purple', flexBasis: 100, height: 100}}><Text>Text</Text></View>
+        <View style={{backgroundColor: 'green', flexBasis: 100, height: 100}}><Text>Text</Text></View>
       </View>
     </View>
   );
