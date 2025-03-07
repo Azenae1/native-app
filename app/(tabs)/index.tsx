@@ -11,38 +11,36 @@ import { ThemedView } from '@/components/ThemedView';
 const width = Dimensions.get('window').width;
 export default function HomeScreen() {
   return (
-    <View style={styles.titleContainer}>
-      <View style={styles.top}>
-        <ThemedText style={styles.textStyle}>Welcome!</ThemedText>
-      <Button title='Click me'/>
+    <View style={styles.container}>
+      <View style={styles.content}>
+        <Text>Login</Text>
+        <View style={styles.form}>
+          <TextInput style={styles.input} placeholder='email'/>
+          <TextInput style={styles.input} placeholder='password'/>
+      <Button title='login'/>
       </View>
-      <View style={{backgroundColor: 'aquamarine', alignItems: 'flex-start', height: 500, gap: 10, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between'}}>
-        <View style={{backgroundColor: 'tomato', width: (width / 2) - 5, height: 100}}><Text>Text</Text></View>
-        <View style={{backgroundColor: 'purple', width: (width / 2) - 5, height: 100}}><Text>Text</Text></View>
-        <View style={{backgroundColor: 'green', width: (width / 2) - 5, height: 100}}><Text>Text</Text></View>
+      <Text>Forgot password?</Text>
       </View>
+      
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    marginTop: 50,
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  stepContainer: {
+  content: {
     gap: 8,
     marginBottom: 8,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  form: {
+
   },
-  top: {
-    flexDirection: 'row',
-   alignSelf: 'center',
+  input: {
+
   },
   textStyle: {
     color: 'blue',
