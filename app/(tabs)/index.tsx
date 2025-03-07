@@ -1,9 +1,6 @@
 import { Image, StyleSheet, Platform, TextInput, Button, View, Text, Dimensions } from 'react-native';
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+import { Input } from '@/shared/Input/Input';
 
 
 
@@ -19,11 +16,11 @@ export default function HomeScreen() {
         style={styles.logo}
         />
         <View style={styles.form}>
-          <TextInput style={styles.input} placeholder='email'/>
-          <TextInput style={styles.input} placeholder='password'/>
+          <Input placeholder='Email'/>
+          <Input placeholder='Password'/>
       <Button title='login'/>
       </View>
-      <Text>Forgot password?</Text>
+      <Text style={styles.textStyle}>Forgot password?</Text>
       </View>
       
     </View>
