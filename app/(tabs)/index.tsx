@@ -13,7 +13,11 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <Text>Login</Text>
+        <Text style={styles.textStyle}>Login</Text>
+        <Image 
+        source={require('../../assets/images/logo.png')}
+        style={styles.logo}
+        />
         <View style={styles.form}>
           <TextInput style={styles.input} placeholder='email'/>
           <TextInput style={styles.input} placeholder='password'/>
@@ -30,24 +34,31 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    padding: 55
+    padding: 55,
+    backgroundColor: '#16171D',
   },
   content: {
     gap: 50,
     alignItems: 'center',
+    
+  },
+  logo: {
+    width: 150,
+    height: 150,
+    borderRadius: 20
   },
   form: {
     alignSelf: 'stretch',
-gap:16,
+    gap:16,
+    
   },
   input: {
     backgroundColor: '#2E2D3D',
-    
+    borderRadius: 10,
   },
+  
   textStyle: {
-    color: 'blue',
-    fontSize: 32,
-    borderWidth: 1,
-    borderColor: 'red',
+    color: 'white',
+    fontSize: 24
   }
 });
