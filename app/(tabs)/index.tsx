@@ -30,17 +30,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    padding: 55
   },
   content: {
-    gap: 8,
-    marginBottom: 8,
+    gap: 50,
+    alignItems: 'center',
   },
   form: {
-
+    alignSelf: 'stretch',
+gap:16,
   },
   input: {
-
+    backgroundColor: '#2E2D3D',
+    
   },
   textStyle: {
     color: 'blue',
