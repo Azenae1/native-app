@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     
   },
   input: {
-    backgroundColor: '#2E2D3D',
+    
     borderRadius: 10,
   },
   
