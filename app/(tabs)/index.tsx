@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Platform, TextInput, Button, View, Text, Dimensions } from 'react-native';
 
 import { Input } from '@/shared/Input/Input';
+import { Gaps } from '@/shared/tokens';
 
 
 
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#16171D',
   },
   content: {
-    gap: 50,
+    gap: Gaps.g50,
     alignItems: 'center',
     
   },
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
   },
   form: {
     alignSelf: 'stretch',
-    gap:16,
+    gap: Gaps.g16,
     
   },
   input: {

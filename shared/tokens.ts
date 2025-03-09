@@ -6,3 +6,8 @@ export const Colors = {
     primaryHover: '#452481',
     link: '#A97BFF',
 };
+
+export const Gaps = {
+    g16: 16,
+    g50: 50,
+}
