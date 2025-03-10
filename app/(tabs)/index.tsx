@@ -2,7 +2,7 @@ import { Image, StyleSheet, Platform, TextInput, Button, View, Text, Dimensions 
 
 import { Input } from '@/shared/Input/Input';
 import { Gaps } from '@/shared/tokens';
-
+import EyeClosed from '@/assets/icons/EyeClosed';
 
 
 
@@ -22,6 +22,7 @@ export default function HomeScreen() {
       <Button title='login'/>
       </View>
       <Text style={styles.textStyle}>Forgot password?</Text>
+      <EyeClosed/>
       </View>
       
     </View>
