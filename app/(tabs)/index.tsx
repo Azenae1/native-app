@@ -2,8 +2,6 @@ import { Image, StyleSheet, Platform, TextInput, Button, View, Text, Dimensions 
 
 import { Input } from '@/shared/Input/Input';
 import { Gaps } from '@/shared/tokens';
-import EyeClosed from '@/assets/icons/EyeClosed';
-import EyeOpen from '@/assets/icons/EyeOpen';
 
 
 
@@ -19,12 +17,11 @@ export default function HomeScreen() {
         />
         <View style={styles.form}>
           <Input placeholder='Email'/>
-          <Input placeholder='Password'/>
+          <Input isPassword placeholder='Password'/>
       <Button title='login'/>
       </View>
       <Text style={styles.textStyle}>Forgot password?</Text>
-      <EyeClosed/>
-      <EyeOpen/>
+    
       </View>
       
     </View>
