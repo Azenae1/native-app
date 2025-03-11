@@ -1,7 +1,8 @@
-import { Image, StyleSheet, Platform, TextInput, Button, View, Text, Dimensions } from 'react-native';
+import { Image, StyleSheet, Platform, TextInput, View, Text, Dimensions } from 'react-native';
 
 import { Input } from '@/shared/Input/Input';
-import { Gaps } from '@/shared/tokens';
+import { Fonts, Gaps } from '@/shared/tokens';
+import { Button } from '@/shared/Button/Button';
 
 
 
@@ -10,7 +11,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.textStyle}>Login</Text>
+        
         <Image 
         source={require('../../assets/images/logo.png')}
         style={styles.logo}
@@ -18,7 +19,7 @@ export default function HomeScreen() {
         <View style={styles.form}>
           <Input placeholder='Email'/>
           <Input isPassword placeholder='Password'/>
-      <Button title='login'/>
+      <Button text='Sign In'/>
       </View>
       <Text style={styles.textStyle}>Forgot password?</Text>
     
@@ -57,6 +58,6 @@ const styles = StyleSheet.create({
   
   textStyle: {
     color: 'white',
-    fontSize: 24
+    fontSize: Fonts.f18,
   }
 });
